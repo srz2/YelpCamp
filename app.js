@@ -22,7 +22,9 @@ var app = express();
 app.use(flash());
 
 
-mongoose.connect("mongodb://localhost/yelp_camp");
+// mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect("mongodb://steven:0tskulti9@ds139675.mlab.com:39675/yelpcamp-srz2");
+
 
 app.use(require("express-session")({
     secret: "YelpCamp is gonna be awesome",
