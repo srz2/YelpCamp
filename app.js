@@ -21,7 +21,8 @@ var app = express();
 
 app.use(flash());
 
-mongoose.connect(process.env.databaseURL);
+var dbURL = process.env.databaseURL || "mongodb://localhost/yelp_camp";
+mongoose.connect(dbURL);
 
 app.use(require("express-session")({
     secret: "YelpCamp is gonna be awesome",
